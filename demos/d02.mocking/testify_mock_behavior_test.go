@@ -26,12 +26,6 @@ func (m *MockCar) Start() {
     // m.Called()
 }
 
-func (m *MockCar) GetAC() *AirCondition {
-    // args := m.Called()
-    // return args.Get(0).(AirCondition)
-    return nil
-}
-
 
 func TestARunningCar(t *testing.T) {
     mockCar := new(MockCar)
