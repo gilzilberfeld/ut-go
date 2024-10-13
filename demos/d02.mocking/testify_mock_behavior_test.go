@@ -4,31 +4,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/mock"
 )
-type MockCar struct {
-    mock.Mock
-}
-
-func (m *MockCar) IsRunning() bool {
-    // args sent to method
-    // Expect a bool in the first position
-    args := m.Called()
-    return args.Bool(0)
-}
-
-
-func (m *MockCar) SetAC(ac AirCondition) {
-    // m.Called(ac)
-}
-
-func (m *MockCar) Start() {
-    // m.Called()
-}
-
 
 func TestARunningCar(t *testing.T) {
-    mockCar := new(MockCar)
+    mockCar := new(TestifyMockCar)
     mockCar.On("IsRunning").Return(true)
 
 	driver := &Driver{mockCar}
