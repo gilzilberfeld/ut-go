@@ -8,10 +8,10 @@ import (
 
 type MockRunningCar struct{}
 
+
 func (m *MockRunningCar) IsRunning() bool {
     return true
 }
-
 func (m *MockRunningCar) SetAC(ac AirCondition) {
 }
 

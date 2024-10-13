@@ -18,3 +18,7 @@ func (car *Car) SetAC(ac AirCondition) {
 func (car *Car) Start() {
 	panic("Not yet implemented")
 }
+
+func (car *Car) GetAC() AirCondition {
+	panic("Not yet implemented")
+}
