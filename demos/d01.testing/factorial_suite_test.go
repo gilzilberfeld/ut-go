@@ -14,7 +14,7 @@ type FactorialSuite struct {
 }
 
 // Runs before each test
-func (suite *FactorialSuite) BeforeTest() {
+func (suite *FactorialSuite) SetupTest() {
     suite.theFactorial = Factorial{}
 }
 
